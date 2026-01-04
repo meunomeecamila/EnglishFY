@@ -1,0 +1,66 @@
+/* =========================
+   HEADER DA PÁGINA
+   ========================= */
+
+.subjects-header {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.subjects-header p {
+  max-width: 600px;
+  margin: 0.8rem auto 0;
+}
+
+/* =========================
+   GRID DE MATÉRIAS
+   ========================= */
+
+.subjects {
+  padding-top: 2rem;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+/* =========================
+   CARD DE MATÉRIA
+   ========================= */
+
+.subjects-grid .content-card {
+  position: relative;
+  padding: 2.2rem 1.5rem;
+}
+
+.subjects-grid h3 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Badge de progresso */
+.subjects-grid .badge {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 1024px) {
+  .subjects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+}

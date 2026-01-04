@@ -91,8 +91,9 @@ section {
    ========================= */
 
 .about {
-  background-color: var(--color-light);
+  background-color: #eef1f4;
 }
+
 
 .about-card {
   display: flex;
