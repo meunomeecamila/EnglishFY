@@ -1,0 +1,182 @@
+/* =========================
+   CARDS (BASE)
+   ========================= */
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   CARDS DE CONTEÚDO
+   ========================= */
+
+.content-card.primary {
+  background-color: rgba(204, 109, 127, 0.35) !important;
+}
+
+.content-card.secondary {
+  background-color: rgba(127, 198, 198, 0.35) !important;
+}
+
+.content-card.tertiary {
+  background-color: rgba(242, 197, 114, 0.35) !important;
+}
+
+
+
+
+
+.content-card {
+  background-color: var(--color-light);
+  border-radius: 20px;
+  padding: 1.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.content-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.content-card p {
+  font-size: 0.9rem;
+}
+
+/* Variações de cor */
+.content-card.primary {
+  background-color: rgba(244, 182, 194, 0.25);
+}
+
+.content-card.secondary {
+  background-color: rgba(184, 216, 216, 0.25);
+}
+
+.content-card.tertiary {
+  background-color: rgba(246, 214, 173, 0.25);
+}
+
+/* =========================
+   ÍCONES ARREDONDADOS
+   ========================= */
+
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto 0.8rem;
+}
+
+/* Transparência pastel */
+.icon-primary {
+  background-color: rgba(244, 182, 194, 0.35);
+}
+
+.icon-secondary {
+  background-color: rgba(184, 216, 216, 0.35);
+}
+
+.icon-tertiary {
+  background-color: rgba(246, 214, 173, 0.35);
+}
+
+/* =========================
+   MENU ATIVO
+   ========================= */
+
+.nav-menu a.active {
+  background-color: var(--color-light);
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* =========================
+   BADGES / PROGRESSO
+   ========================= */
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-progress {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+}
+
+/* =========================
+   BLOCO ATIVO (MATÉRIA SELECIONADA)
+   ========================= */
+
+.block-active {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* =========================
+   BOTÃO DESABILITADO
+   ========================= */
+
+.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* =========================
+   NAV GLASS (BOTÃO DE VIDRO)
+   ========================= */
+
+/* =========================
+   NAV GLASS – BOTÕES DA HEADER
+   ========================= */
+
+.nav-glass {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 2px solid;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  color: var(--color-dark);
+}
+
+/* ROSA */
+.nav-glass.pink {
+  border-color: rgb(240, 143, 160);
+  background-color: rgba(240, 143, 160, 0.25);
+}
+
+/* AZUL */
+.nav-glass.blue {
+  border-color: rgb(127, 198, 198);
+  background-color: rgba(127, 198, 198, 0.25);
+}
+
+/* AMARELO */
+.nav-glass.yellow {
+  border-color: rgb(242, 197, 114);
+  background-color: rgba(242, 197, 114, 0.25);
+}
+
+/* Hover */
+.nav-glass:hover {
+  transform: translateY(-1px);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+
