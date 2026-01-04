@@ -1,0 +1,70 @@
+/* =========================
+   CONTEXTO DA AULA
+   ========================= */
+
+.content-context {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.content-context p {
+  max-width: 600px;
+  margin: 0.6rem auto 0;
+}
+
+/* =========================
+   AULA
+   ========================= */
+
+.lesson {
+  padding-top: 2rem;
+}
+
+.word-list {
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.word-list li {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 12px;
+  background-color: var(--color-light);
+}
+
+/* Media placeholder */
+.lesson-media {
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 16px;
+  background-color: rgba(127, 198, 198, 0.25);
+}
+
+/* =========================
+   EXERCÍCIOS
+   ========================= */
+
+.exercises {
+  padding-top: 3rem;
+}
+
+.exercise {
+  margin-bottom: 1.8rem;
+}
+
+.exercise p {
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.exercise label {
+  display: block;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+.exercise-form button {
+  margin-top: 1.5rem;
+}

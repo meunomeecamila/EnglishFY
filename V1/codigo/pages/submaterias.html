@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>EnglishFY | Subjects</title>
+  <title>EnglishFY | Vocabulary</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="../styles/base.css" />
   <link rel="stylesheet" href="../styles/layout.css" />
   <link rel="stylesheet" href="../styles/components.css" />
-  <link rel="stylesheet" href="../styles/pages/materias.css" />
+  <link rel="stylesheet" href="../styles/pages/submaterias.css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
       <ul class="nav-menu">
         <li><a href="../index.html" class="nav-glass pink">Home</a></li>
-        <li><a href="materias.html" class="nav-glass blue active">Matérias</a></li>
+        <li><a href="materias.html" class="nav-glass blue">Matérias</a></li>
         <li><a href="quiz.html" class="nav-glass yellow">Teste nível</a></li>
         <li><a href="contato.html" class="nav-glass pink">Contato</a></li>
       </ul>
@@ -34,48 +34,41 @@
   <!-- MAIN -->
   <main>
 
-    <!-- TITLE -->
-    <section class="subjects-header container">
-      <h1>Matérias</h1>
-      <p>
-        Escolha uma matéria para começar a estudar. Cada matéria possui diversos conteúdos
-        com atividades, vídeos, áudios e imagens.
-      </p>
+    <!-- SUBJECT CONTEXT -->
+    <section class="subject-context container">
+      <div class="subject-selected primary">
+        <div class="icon-circle icon-primary">📚</div>
+        <h1>Vocabulary</h1>
+        <p>Escolha um tópico para começar a estudar.</p>
+      </div>
     </section>
 
-    <!-- SUBJECTS GRID -->
-    <section class="subjects container">
-      <div class="subjects-grid">
+    <!-- SUBSUBJECTS -->
+    <section class="subsubjects container">
+      <div class="subsubjects-grid">
 
-        <!-- Vocabulary -->
-        <a href="submaterias.html" class="card-link">
-          <div class="content-card primary">
-            <div class="icon-circle icon-primary">📚</div>
-              <h3>Vocabulary</h3>
-              <span class="badge badge-progress">2 / 4</span>
-          </div>
-        </a>
-
-
-        <!-- Grammar -->
+        <!-- Food -->
         <div class="content-card secondary">
-          <div class="icon-circle icon-secondary">✏️</div>
-          <h3>Grammar</h3>
+          <h3>Food</h3>
           <span class="badge badge-progress">1 / 5</span>
         </div>
 
-        <!-- Listening -->
+        <!-- Animals -->
         <div class="content-card tertiary">
-          <div class="icon-circle icon-tertiary">🎧</div>
-          <h3>Listening</h3>
-          <span class="badge badge-progress">0 / 4</span>
+          <h3>Animals</h3>
+          <span class="badge badge-progress">0 / 5</span>
         </div>
 
-        <!-- Reading -->
+        <!-- Objects -->
         <div class="content-card primary">
-          <div class="icon-circle icon-primary">📖</div>
-          <h3>Reading</h3>
-          <span class="badge badge-progress">0 / 4</span>
+          <h3>Objects</h3>
+          <span class="badge badge-progress">3 / 5</span>
+        </div>
+
+        <!-- Places -->
+        <div class="content-card secondary">
+          <h3>Places</h3>
+          <span class="badge badge-progress">0 / 5</span>
         </div>
 
       </div>
