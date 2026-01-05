@@ -36,11 +36,12 @@
 /* Media placeholder */
 .lesson-media {
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
-  border-radius: 16px;
-  background-color: rgba(127, 198, 198, 0.25);
+  border-radius: 18px;
+  background-color: rgba(127, 198, 198, 0.35);
 }
+
 
 /* =========================
    EXERCÍCIOS
@@ -68,3 +69,52 @@
 .exercise-form button {
   margin-top: 1.5rem;
 }
+
+.breadcrumb {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.breadcrumb a {
+  color: inherit;
+}
+
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.word-card {
+  background-color: var(--color-light);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.word-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .word-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exercise label {
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+  background-color: var(--color-light);
+}
+
+.exercise label:hover {
+  background-color: #e9eef3;
+}
+
