@@ -1,0 +1,100 @@
+/* =========================
+   RESULT HEADER
+   ========================= */
+
+.result-header {
+  padding-top: 3.5rem;
+  text-align: center;
+}
+
+.result-mascot {
+  width: 140px;
+  margin-bottom: 1.2rem;
+}
+
+.result-bubble {
+  display: inline-block;
+  padding: 1.2rem 1.5rem;
+  background-color: var(--color-light);
+  border-radius: 18px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   LEVEL CARD
+   ========================= */
+
+.level-section {
+  padding-top: 3rem;
+}
+
+.level-card {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 24px;
+  text-align: center;
+  background-color: rgba(127, 198, 198, 0.35);
+}
+
+.level-tag {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.level-title {
+  font-size: 4rem;
+  margin: 0.8rem 0;
+}
+
+.level-description {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* =========================
+   RECOMMENDATIONS
+   ========================= */
+
+.recommendations {
+  padding-top: 4rem;
+}
+
+.recommendations h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* =========================
+   ACTIONS
+   ========================= */
+
+.result-actions {
+  padding-top: 3.5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.result-actions .btn {
+  margin: 0.5rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .level-title {
+    font-size: 3.2rem;
+  }
+}

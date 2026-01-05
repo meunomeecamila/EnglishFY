@@ -1,0 +1,108 @@
+/* =========================
+   QUIZ INTRO
+   ========================= */
+
+.quiz-intro {
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.quiz-mascot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Mascot */
+.mascot-img {
+  width: 160px;
+  height: auto;
+}
+
+/* Speech bubble */
+.speech-bubble {
+  position: relative;
+  max-width: 320px;
+  padding: 1.2rem 1.4rem;
+  background-color: var(--color-light);
+  border-radius: 18px;
+  font-size: 0.95rem;
+}
+
+/* Bubble arrow */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent var(--color-light) transparent transparent;
+}
+
+/* Start button */
+.start-quiz-btn {
+  margin-top: 1.5rem;
+}
+
+/* =========================
+   QUIZ QUESTIONS
+   ========================= */
+
+.quiz-questions {
+  padding-top: 3rem;
+}
+
+.question-card {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: var(--color-light);
+}
+
+.question-text {
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.option {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #eef1f4;
+}
+
+/* =========================
+   HELPERS
+   ========================= */
+
+.hidden {
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .quiz-mascot {
+    flex-direction: column;
+  }
+
+  .speech-bubble::after {
+    left: 50%;
+    top: -14px;
+    transform: translateX(-50%);
+    border-color: transparent transparent var(--color-light) transparent;
+  }
+}
