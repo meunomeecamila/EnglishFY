@@ -1,0 +1,198 @@
+/* =========================
+   HEADER DA PÁGINA
+   ========================= */
+
+.contact-header {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.contact-header p {
+  max-width: 500px;
+  margin: 0.8rem auto 0;
+}
+
+/* =========================
+   CARD DE CONTATO
+   ========================= */
+
+.contact-section {
+  padding-top: 2rem;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 24px;
+  background-color: var(--color-light);
+}
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.contact-about {
+  text-align: center;
+}
+
+.contact-about img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 60% center; /* empurra levemente para a direita */
+  margin-bottom: 1rem;
+}
+
+.contact-about img {
+  margin-left: 115px;
+}
+
+
+.contact-about h3 {
+  margin-bottom: 0.4rem;
+}
+
+.contact-about p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-gray);
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 0.8rem;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 768px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-about img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* =========================
+   RADIO BUTTONS
+   ========================= */
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-question {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* =========================
+   CAMPOS CONDICIONAIS
+   ========================= */
+
+.extra-fields {
+  display: none;
+  margin-top: 1rem;
+}
+
+/* =========================
+   MOSTRAR CAMPOS SE "SIM"
+   ========================= */
+
+input[name="wantClasses"][value="yes"]:checked
+~ .extra-fields {
+  display: block;
+}
+
+/* =========================
+   TOGGLE SWITCH (iOS STYLE)
+   ========================= */
+
+.toggle-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch {
+  position: relative;
+  width: 48px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* ON STATE */
+.switch input:checked + .slider {
+  background-color: var(--color-primary);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
