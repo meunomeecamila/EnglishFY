@@ -50,7 +50,7 @@
       <div class="level-card">
 
         <span class="level-tag">Your level</span>
-        <h1 class="level-title">B1</h1>
+        <h1 class="level-title"></h1>
 
         <p class="level-description">
           You can understand everyday English and communicate in familiar situations.
@@ -102,6 +102,19 @@
       <p>© 2026 EnglishFY. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+  const result = JSON.parse(
+    localStorage.getItem("englishfy_quiz_result")
+  );
+
+  if (result && result.level) {
+    document.querySelector(".level-title").textContent = result.level;
+  } else {
+    document.querySelector(".level-title").textContent = "A1";
+  }
+</script>
+
 
 </body>
 </html>

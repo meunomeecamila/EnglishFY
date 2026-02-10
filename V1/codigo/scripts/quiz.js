@@ -73,23 +73,80 @@ function calculateResults() {
 }
 
 // Determine level
-function determineLevel(score, correctByType) {
-  const rules = quizData.levelRules;
+function determineLevel(answers, questions) {
+  let totalCorrect = 0;
 
-  if (rules.C2.perfectScore && score === maxScore()) return "C2";
-  if (rules.C1.allowOneReadingError) return "C1";
+  let vocabCorrect = 0;
+  let vocabTotal = 0;
 
-  if (rules.B2.requireAllVocabulary && rules.B2.requireAllGrammar)
+  let grammarCorrect = 0;
+  let grammarTotal = 0;
+
+  let readingCorrect = 0;
+  let readingTotal = 0;
+
+  questions.forEach((q, index) => {
+    const isCorrect = answers[index] === q.correctAnswer;
+
+    if (isCorrect) totalCorrect++;
+
+    if (q.type === "vocabulary") {
+      vocabTotal++;
+      if (isCorrect) vocabCorrect++;
+    }
+
+    if (q.type === "grammar") {
+      grammarTotal++;
+      if (isCorrect) grammarCorrect++;
+    }
+
+    if (q.type === "reading") {
+      readingTotal++;
+      if (isCorrect) readingCorrect++;
+    }
+  });
+
+  // C2: tudo certo
+  if (totalCorrect === questions.length) {
+    return "C2";
+  }
+
+  // C1: errou apenas 1 e foi reading
+  if (
+    totalCorrect === questions.length - 1 &&
+    readingCorrect === readingTotal - 1
+  ) {
+    return "C1";
+  }
+
+  // B2: tudo certo em vocabulário e gramática
+  if (
+    vocabCorrect === vocabTotal &&
+    grammarCorrect === grammarTotal
+  ) {
     return "B2";
+  }
 
-  if (rules.B1.requireAllVocabulary && rules.B1.requireOneGrammar)
+  // B1: tudo certo em vocabulário e pelo menos 1 de gramática
+  if (
+    vocabCorrect === vocabTotal &&
+    grammarCorrect >= 1
+  ) {
     return "B1";
+  }
 
-  if (score >= rules.A2.minScore && score <= rules.A2.maxScore)
+  // A2: acertou 4 e todas de vocabulário
+  if (
+    totalCorrect === 4 &&
+    vocabCorrect === vocabTotal
+  ) {
     return "A2";
+  }
 
+  // A1: resto
   return "A1";
 }
+
 
 // Max possible score
 function maxScore() {
@@ -115,7 +172,7 @@ function handleNext() {
 // Finish quiz
 function finishQuiz() {
   const { score, correctByType } = calculateResults();
-  const level = determineLevel(score, correctByType);
+  const level = determineLevel(answers, quizData.questions);
 
   localStorage.setItem(
     "englishfy_quiz_result",
