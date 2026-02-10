@@ -1,0 +1,192 @@
+{
+  "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+
+  "questions": [
+    {
+      "id": 1,
+      "type": "vocabulary",
+      "question": "What do you use to write?",
+      "options": [
+        "a book",
+        "a table",
+        "a chair",
+        "a pen"
+      ],
+      "correctAnswer": 3,
+      "weight": 1
+    },
+    {
+      "id": 2,
+      "type": "vocabulary",
+      "question": "What is the color of the sky?",
+      "options": [
+        "blue",
+        "pink",
+        "light yellow",
+        "green"
+      ],
+      "correctAnswer": 0,
+      "weight": 1
+    },
+    {
+      "id": 3,
+      "type": "vocabulary",
+      "question": "How many days are in a week?",
+      "options": [
+        "7 days",
+        "3 days",
+        "2 days",
+        "10 days"
+      ],
+      "correctAnswer": 0,
+      "weight": 1
+    },
+    {
+      "id": 4,
+      "type": "vocabulary",
+      "question": "Which one of these animals is not usually considered a pet?",
+      "options": [
+        "dog",
+        "cat",
+        "ostrich",
+        "snake"
+      ],
+      "correctAnswer": 2,
+      "weight": 1
+    },
+    {
+      "id": 5,
+      "type": "grammar",
+      "question": "Choose the correct sentence.",
+      "options": [
+        "I am not happy, but she are.",
+        "She like playing with dogs.",
+        "They are studying for a test.",
+        "I would will very sleepy."
+      ],
+      "correctAnswer": 2,
+      "weight": 2
+    },
+    {
+      "id": 6,
+      "type": "grammar",
+      "question": "Choose the present simple sentence.",
+      "options": [
+        "She goes to school every day.",
+        "She goes to school now.",
+        "She is going to school yesterday.",
+        "She go to school every day."
+      ],
+      "correctAnswer": 0,
+      "weight": 2
+    },
+    {
+      "id": 7,
+      "type": "grammar",
+      "question": "Which sentence uses the present continuous correctly?",
+      "options": [
+        "She is very interesting.",
+        "I am working yesterday.",
+        "The girl is waiting for the bus.",
+        "The workers go everyday to the shop."
+      ],
+      "correctAnswer": 2,
+      "weight": 2
+    },
+    {
+      "id": 8,
+      "type": "listening",
+      "question": "Which word has a pronunciation closest to 'house'?",
+      "options": [
+        "mouse",
+        "choose",
+        "horse",
+        "whose"
+      ],
+      "correctAnswer": 0,
+      "weight": 2
+    },
+    {
+      "id": 9,
+      "type": "reading",
+      "question": "Read the text: 'Anna studies English every afternoon. She watches videos and reads short texts to improve.' What does Anna do to improve her English?",
+      "options": [
+        "She only watches movies.",
+        "She studies English every afternoon.",
+        "She travels to other countries.",
+        "She teaches English."
+      ],
+      "correctAnswer": 1,
+      "weight": 1
+    },
+    {
+      "id": 10,
+      "type": "reading",
+      "question": "Based on the text, which sentence is true?",
+      "options": [
+        "Anna studies English once a week.",
+        "Anna studies only grammar.",
+        "Anna uses videos and reading to learn.",
+        "Anna does not like English."
+      ],
+      "correctAnswer": 2,
+      "weight": 2
+    }
+  ],
+
+  "levelRules": {
+    "A1": {
+      "maxScore": 3,
+      "recommendations": {
+        "Vocabulary": ["Food", "Objects"],
+        "Grammar": ["Verb to be"],
+        "Listening": ["Basic words"]
+      }
+    },
+    "A2": {
+      "minScore": 4,
+      "maxScore": 5,
+      "requireAllVocabulary": true,
+      "recommendations": {
+        "Vocabulary": ["Food", "Animals", "Objects"],
+        "Grammar": ["Verb to be", "Articles"],
+        "Reading": ["Simple sentences"]
+      }
+    },
+    "B1": {
+      "requireAllVocabulary": true,
+      "requireOneGrammar": true,
+      "recommendations": {
+        "Grammar": ["Present Simple"],
+        "Reading": ["Short paragraphs"],
+        "Listening": ["Short sentences"]
+      }
+    },
+    "B2": {
+      "requireAllVocabulary": true,
+      "requireAllGrammar": true,
+      "recommendations": {
+        "Grammar": ["Present Simple", "Present Continuous"],
+        "Reading": ["Informational texts"],
+        "Listening": ["Daily conversations"]
+      }
+    },
+    "C1": {
+      "allowOneReadingError": true,
+      "recommendations": {
+        "Reading": ["Small stories"],
+        "Listening": ["Short texts"],
+        "Grammar": ["Advanced review"]
+      }
+    },
+    "C2": {
+      "perfectScore": true,
+      "recommendations": {
+        "Vocabulary": ["All modules"],
+        "Grammar": ["All modules"],
+        "Reading": ["All modules"],
+        "Listening": ["All modules"]
+      }
+    }
+  }
+}
