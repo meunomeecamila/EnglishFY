@@ -11,8 +11,32 @@
   <link rel="stylesheet" href="../styles/layout.css" />
   <link rel="stylesheet" href="../styles/components.css" />
   <link rel="stylesheet" href="../styles/pages/conteudo.css" />
+  <link rel="stylesheet" href="../styles/components/sidebar.css" />
 </head>
 <body>
+
+  <body class="with-sidebar">
+
+<button class="sidebar-toggle" id="sidebarToggle">
+  ☰
+</button>
+
+<aside class="sidebar" id="sidebar">
+  <div>
+    <div class="sidebar-logo">
+      EnglishFY
+    </div>
+
+    <div class="sidebar-level">
+      <h3>Your level</h3>
+      <p id="sidebarLevel">-</p>
+    </div>
+  </div>
+
+  <div class="sidebar-login">
+    Login: Guest (coming soon)
+  </div>
+</aside>
 
   <!-- HEADER -->
   <header class="header">
@@ -109,6 +133,26 @@
       <p>© 2026 EnglishFY. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+  const sidebar = document.getElementById("sidebar");
+  const toggleBtn = document.getElementById("sidebarToggle");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    toggleBtn.classList.toggle("move");
+  });
+
+  // Mostrar nível
+  const level = localStorage.getItem("englishfy_user_level");
+  const levelElement = document.getElementById("sidebarLevel");
+
+  if (level) {
+    levelElement.textContent = level;
+  } else {
+    levelElement.textContent = "Not tested yet";
+  }
+</script>
 
 </body>
 </html>

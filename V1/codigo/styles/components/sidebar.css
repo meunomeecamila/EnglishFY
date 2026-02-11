@@ -1,0 +1,51 @@
+/* =========================
+   SIDEBAR BASE
+   ========================= */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #f2f4f7; /* cinza claro elegante */
+  padding: 2rem 1.2rem;
+  border-right: 1px solid #e4e8ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* =========================
+   TOGGLE BUTTON
+   ========================= */
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #e4e8ef; /* cinza claro */
+  color: #333;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: all 0.3s ease;
+}
+
+/* botão desliza quando abre */
+.sidebar-toggle.move {
+  left: 260px;
+}
+
+.sidebar-toggle:hover {
+  background-color: #d8dde6;
+}

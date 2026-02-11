@@ -175,9 +175,10 @@ function finishQuiz() {
   const level = determineLevel(answers, quizData.questions);
 
   localStorage.setItem(
-    "englishfy_quiz_result",
-    JSON.stringify({ level })
-  );
+  "englishfy_user_level",
+  level
+);
+
 
   window.location.href = "resultado-quiz.html";
 }
